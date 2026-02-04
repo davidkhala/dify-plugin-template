@@ -4,7 +4,7 @@ identity:
   label:
     en_US: a dify plugin (provider.identity.label)
   description:
-    en_US: HTML Extractor
+    en_US: a dify plugin (provider.identity.description)
   icon: icon.svg
   tags:
     - tools
