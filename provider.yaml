@@ -1,0 +1,16 @@
+identity:
+  author: davidkhala
+  name: dify-plugin
+  label:
+    en_US: a dify plugin (provider.identity.label)
+  description:
+    en_US: HTML Extractor
+  icon: icon.svg
+  tags:
+    - tools
+    - utilities
+tools:
+  - tools/tool.yaml
+extra:
+  python:
+    source: provider/__init__.py

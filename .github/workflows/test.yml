@@ -1,0 +1,14 @@
+name: ci
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: davidkhala/uv-buildpack@main
+        with:
+          test-entry-point: pytest
+      - run: uv run --active main.py
+        timeout-minutes: 1
+        continue-on-error: true

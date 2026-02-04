@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__
+
+# Unit test / coverage reports
+tests
+
+# UV
+uv.lock
+pyproject.toml
+.python-version
+
+# Environments
+.env
+.venv
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+.github/
+
+# dify cli
+dify

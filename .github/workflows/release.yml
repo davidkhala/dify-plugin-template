@@ -1,0 +1,29 @@
+name: Release Dify Plugin
+
+on:
+  push:
+    tags:
+      - '*'
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    env:
+      REPO_NAME: ${{ github.event.repository.name }}
+
+    steps:
+      - uses: actions/checkout@main
+      - uses: davidkhala/uv-buildpack@main
+      - name: Generate requirements.txt (consumed by dify)
+        run: uv pip compile pyproject.toml -o requirements.txt
+      - uses: davidkhala/build-dify-plugin@main
+        with:
+          pyproject-directory: .
+      - name: Create Release
+        uses: softprops/action-gh-release@master
+        with:
+          files: ${{ env.REPO_NAME }}.difypkg
+          draft: false
+          prerelease: false

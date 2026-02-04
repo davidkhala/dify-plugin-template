@@ -1,0 +1,24 @@
+identity:
+  name: dify-plugin
+  author: davidkhala
+  label:
+    en_US: a dify plugin (tool.identity.label)
+    
+description:
+  human:
+    en_US: a dify plugin (tool.description.human)
+  llm: a dify plugin (tool.description.llm)
+parameters:
+  - name: html
+    type: string
+    required: true
+    label:
+      en_US: html text
+    human_description:
+      en_US: the HTML content to be parsed
+    llm_description: the HTML content to be parsed
+    form: llm
+
+extra:
+  python:
+    source: tools/__init__.py
