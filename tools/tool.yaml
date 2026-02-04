@@ -1,5 +1,5 @@
 identity:
-  name: dify-plugin
+  name: a-dify-plugin # dify-plugin is preserved keyword
   author: davidkhala
   label:
     en_US: a dify plugin (tool.identity.label)
@@ -16,7 +16,6 @@ parameters:
       en_US: html text
     human_description:
       en_US: the HTML content to be parsed
-    llm_description: the HTML content to be parsed
     form: llm
 
 extra:

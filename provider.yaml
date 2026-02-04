@@ -6,9 +6,6 @@ identity:
   description:
     en_US: a dify plugin (provider.identity.description)
   icon: icon.svg
-  tags:
-    - tools
-    - utilities
 tools:
   - tools/tool.yaml
 extra:
